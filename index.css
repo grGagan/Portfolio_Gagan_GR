@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("pic2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    padding: 1opx 10pc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 80px 80px 80px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+.header-text h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+span {
+    color: brown;
+}
+
+.scan {
+    color: aliceblue;
+}
+
+/*about-------*/
+#about {
+    padding: 80px 0;
+    color: #938a8a;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutcol1 {
+    flex-basis: 35%;
+}
+
+.aboutcol1 img {
+    width: 100%;
+    border-radius: 80px;
+    padding-left: 40px;
+
+}
+
+.aboutcol2 {
+    flex-basis: 60%;
+}
+
+.sub-tittle {
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(249, 244, 244);
+}
+
+.tab-tittle {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tablinks {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tablinks::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.tablinks.activelink::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px, 0;
+}
+
+.tab-contents ul li span br {
+    color: red;
+    font-size: 15px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.Active-tab {
+    display: block;
+
+}
+
+/*----contact--*/
+.contact-left {
+    flex-basis: 35%;
+
+    padding-left: 50px;
+}
+
+.contact-right {
+    flex-basis: 35%;
+    float: left;
+    display: inline-block;
+    padding-right: 60px;
+    padding-bottom: 60px;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: darkcyan;
+    margin-right: 15px;
+}
+
+.social {
+    margin: 30px;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: rgb(36, 29, 134);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social a:hover {
+    color: red;
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: block;
+    margin: 50px autu;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #e91111;
+}
+
+.btn btn2 {
+    display: inline-block;
+    background: red;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #443c3f;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ff004f;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/*-------FOR Small screen that is for mobile screen--*/
+
+/*#ab{
+    display: none;
+}*/
+nav .fa-solid {
+    display: none;
+}
+
+/*@media only screen and(max-width:600px){*/
+@media only screen and (max-width:400px) {
+    #header {
+        background-image: url("pic3.jpg");
+        width: 100%;
+    }
+
+    .header-text {
+        margin-top: 100px;
+        font-size: 30px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    #ab {
+        padding-right: 10px;
+    }
+
+    nav ul {
+        background: red;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        position: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-tittle {
+        font-size: 40px;
+    }
+
+    .aboutcol1,
+    .aboutcol2 {
+        flex-basis: 200%;
+    }
+
+    .aboutcol1 {
+        margin-bottom: 30px;
+    }
+
+    .aboutcol2 {
+        font-size: 14px;
+        /*  */
+        padding: 0 5px;
+    }
+
+    .tablinks {
+        font-size: 30px;
+
+
+    }
+
+    .tab-contents {
+        font: size 20px;
+        
+    }
+
+    .contact-left {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .contact-right {
+        margin-left: 100px;
+    }
+    /*  */
+    .tab-tittle{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0 10px;
+
+    }
+    .tablinks{
+        font-size: 19px;
+    }
+    .aboutcol2 p{
+        padding-top: 5px;
+        line-height: 22px;
+    }
+
+    .tablinks:nth-child(4),
+    .tablinks:nth-child(5){
+        padding-top: 14px;
+        /* color: #e91111; */
+    }
+    .aboutcol1 img {
+        width: 100%;
+        padding: 30px;
+    }
+    .contact-right{
+        margin:0px;
+        flex-basis: 100%;
+        float:none;
+
+        padding: 10px 13px;
+
+    }
+    .contact-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        
+    }
+    nav #ab{
+        padding-top: 5px;
+    }
+    .header-text{
+        margin-top: 50%;
+    }
+}

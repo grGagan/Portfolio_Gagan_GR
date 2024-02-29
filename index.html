@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c83f859b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+            <ul id="sidemenue">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                
+                <i class="fa-solid fa-x" onclick="closemenue()"></i>
+                
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenue()" id="ab"></i>
+            
+            </nav>
+            <div class="header-text">
+                <p></p>
+                <h1> <span>Gagan G R </span><br>
+                    Looking for an entry level position <br>
+                    to enhance skills and gain knowledge</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--aboutt-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="photo.jpg">
+                </div>
+                <div class="aboutcol2"> 
+                    <h1 class="sub-tittle">About Me</h1>
+                    <p>I am 2023 passed out  MCA Graduate, looking for entry level position 
+                        to enhance my skills and to gain knowledge,
+                        I have knowledge in Core Java concepts 
+                        and in MySQL and I have  experience in HTML,CSS ,where I did internship in my third sem</p>
+                         <div class="tab-tittle">
+                            <p class="tablinks activelink" onclick="opentab('Skills')">Skills</p>
+                            <p class="tablinks " onclick="opentab('education')">Education</p>
+                            <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                            <p class="tablinks" onclick="opentab('Certificates')">Certificates</p>
+                            <p class="tablinks" onclick="opentab('Personal Details')" >Personal Details</p>
+                         </div>
+                         <div class="tab-contents Active-tab" id="Skills">
+                            <ul>
+                                <li><span>JAVA</span><br>Core java concepts</li><br>
+                                <li><span>Mysql</span><br> sql queries</li><br>
+                                <li><span>Front-end</span><br>HTLM ,CSS,Java script </li><br>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Master of computer Application(MCA)</span><br>2021-2023<br> Rajarajeswrai coolge of engineering <br>Banglore</li><br>
+                                <li><span>Bachelor of Computer Application(BCA)</span><br> 2018-2012<br>SJRC<br>Banglore</li><br>
+                                <li><span>PUC</span><br>2016-2108<br>Banglore </li><br>
+                                <li><span>SSLC</span><br>2015-2016<br>Banglore</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Intern</span><br>Software Developer Intern<br>10/2022-12/2022<br>by Using Html and css created web pages</li>
+                                
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Certificates">
+                            <ul>
+                                <li><span>JAVA</span><br>Programming in java by NPTEL</li><br>
+                                <li><span>JAVA</span><br> Programming in java by besanth Technologies</li><br>
+                                <li><span>Mysql</span><br>Basics of Mysql in Udemy</li>
+                            </ul>
+
+                         </div>
+                         <div class="tab-contents" id="Personal Details">
+                            <ul>
+                                <li><span>Name:- </span><scan>Gagan G R</scan></li><br>
+                                <li><span>Phone Number:- </span><scan>9980810814</scan></li><br>
+                                <li><span>Email:- </span><scan>grgagan21@gmail.com</scan></li><br>
+                                <li><span>Father:- </span><scan>Ranganath G N</scan></li><br>
+                                <li><span>Mother:-</span><scan>Lolakshi B L</scan></li><br>
+                                <li><span>Languages known:- </span><scan>English<br>Kannada</scan></li><br>
+                                <li><span>Nationality:- </span><scan>Indian</scan></li>
+
+                            </ul>
+                         </div>
+                </div>
+
+            
+            </div>
+        </div>
+    </div>
+    <!-----Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+              <div class="contact-left">
+                <h1 class="sub-tittle">Contact</h1>
+                <p><i class="fa-solid fa-envelope"></i>grgagn21@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9**********</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/gagan-gr-5b4b15214"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Gagan.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <h1 class="sub-tittle">Let's get in touch!</h1>
+                <form>
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                    <input type="email" name="email"  placeholder="Enter your email id" required>
+                    <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2" style="background-color: red;">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tablinks");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("Active-tab");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("Active-tab");
+        }  
+    </script>
+    <script>
+        var sidemen=document.getElementById("sidemenue");
+        function openmenue(){
+            sidemen.style.right="0";
+        }
+        function closemenue(){
+            sidemen.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
